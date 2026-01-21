@@ -49,11 +49,11 @@ module "eks" {
     default = {
       name = "ng-default"
 
-      instance_types = ["t3.micro"]
+      instance_types = ["t3.small"]
 
-      min_size     = 1
+      min_size     = 2
       max_size     = 3
-      desired_size = 3
+      desired_size = 2
 
       subnet_ids = module.vpc.private_subnets
 
